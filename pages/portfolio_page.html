@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Professional Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fprofession5757back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="bg-surface shadow-card sticky top-0 z-sticky">
+        <nav class="max-w-content mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 1.09-.09 2.16-.31 3.16-.69C16.04 26.69 18 24.96 18 23v-9l4-2-10-10z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-inter font-semibold text-primary">Tayyab Wahab Awan</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="about_page.html" class="text-text-secondary hover:text-primary transition-colors duration-200">About</a>
+                    <a href="portfolio_page.html" class="text-accent font-medium border-b-2 border-accent pb-1 transition-colors duration-200">Portfolio</a>
+                    <a href="publications_page.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Publications</a>
+                    <a href="contact_page.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-primary-100 transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-border">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="about_page.html" class="text-text-secondary hover:text-primary px-2 py-1 transition-colors duration-200">About</a>
+                    <a href="portfolio_page.html" class="text-accent font-medium px-2 py-1">Portfolio</a>
+                    <a href="publications_page.html" class="text-text-secondary hover:text-primary px-2 py-1 transition-colors duration-200">Publications</a>
+                    <a href="contact_page.html" class="text-text-secondary hover:text-primary px-2 py-1 transition-colors duration-200">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-content mx-auto px-6 py-12">
+        <!-- Breadcrumb -->
+        <nav class="mb-8 animate-on-scroll" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2 text-sm text-text-secondary">
+                <li>
+                    <a href="about_page.html" class="hover:text-primary transition-colors duration-200">Home</a>
+                </li>
+                <li>
+                    <svg class="w-4 h-4 mx-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                    </svg>
+                </li>
+                <li class="text-accent font-medium" aria-current="page">Portfolio</li>
+            </ol>
+        </nav>
+
+        <!-- Page Header -->
+        <section class="mb-12 animate-on-scroll">
+            <h1 class="text-fluid-3xl font-inter font-bold text-primary mb-4">Portfolio</h1>
+            <p class="text-fluid-lg text-text-secondary max-w-3xl leading-relaxed">
+                Explore my collection of projects spanning full-stack development, UI/UX design, and cloud architecture. Each project represents a unique challenge solved through innovative technology solutions and user-centered design principles.
+            </p>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="mb-12 animate-on-scroll stagger-2">
+            <div class="bg-surface rounded-2xl shadow-card p-6">
+                <!-- Search Bar -->
+                <div class="relative mb-6">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <svg class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="search-input" placeholder="Search projects by title, description, or technology..." class="w-full pl-10 pr-4 py-3 border border-border rounded-xl focus:ring-2 focus:ring-accent focus:border-accent transition-colors duration-200 text-text-primary placeholder-text-secondary" />
+                    <button id="clear-search" class="absolute inset-y-0 right-0 pr-3 flex items-center text-text-secondary hover:text-primary transition-colors duration-200 hidden">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Filter Tags -->
+                <div class="flex flex-wrap items-center gap-1 mb-4">
+                    <span class="text-lg font-medium text-accent">Filter by technology:</span>
+                    <div id="filter-tags" class="flex flex-wrap gap-1">
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="cv">Computer Vision</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="Machine Learning">Machine Learning</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="NLP">NLP</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="LLM">LLM</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="RAG">RAG</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="Robotics">Robotics</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="python">Python</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="C++">C++</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="Robotics">Mobile App</button>
+                    </div>
+                </div>
+
+                <!-- Active Filters and Results Count -->
+                <div class="flex items-center justify-between">
+                    <div id="active-filters" class="flex flex-wrap gap-2"></div>
+                    <div id="results-count" class="text-sm text-text-secondary">
+                        Showing <span id="count-number">12</span> projects
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="mb-16 animate-on-scroll stagger-3">
+            <h2 class="text-2xl font-inter font-bold text-primary mb-8 flex items-center">
+                <svg class="w-6 h-6 text-accent mr-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Featured Projects
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-projects">
+                <!-- Featured Project 1 -->
+                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv">
+                    <div class="aspect-video rounded-t-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="E-commerce Platform" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-inter font-semibold text-primary mb-3">Multi-view Point Tracking</h3>
+                        <p class="text-text-secondary mb-4 leading-relaxed">
+                            Full-stack e-commerce solution with real-time inventory management, secure payment processing, and advanced analytics dashboard.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">Computer Vision</span>
+                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">C++</span>
+                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">Extended Kalman Filter</span>
+                            <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">Particle Filter</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="view-details-btn text-accent hover:text-accent-600 font-medium transition-colors duration-200">View Details</button>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/alexjohnson/ecommerce-platform" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://ecommerce-demo.alexjohnson.dev" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Expandable Project Details -->
+                        <div class="project-details-expanded max-h-0 overflow-hidden transition-all duration-500 mt-4">
+                            <div class="border-t border-primary-200 pt-4">
+                                <h4 class="font-inter font-semibold text-primary mb-3">Project Overview</h4>
+                                <p class="text-text-secondary mb-4 leading-relaxed">
+                                    This comprehensive computer vision project implements advanced multi-view point tracking algorithms using Extended Kalman Filter and Particle Filter techniques. The system processes multiple camera feeds simultaneously to track moving objects across different viewpoints with high accuracy and real-time performance.
+                                </p>
+                                
+                                <h4 class="font-inter font-semibold text-primary mb-3">Key Features</h4>
+                                <ul class="text-text-secondary mb-4 space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Multi-camera synchronization and calibration
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Real-time object detection and tracking
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Advanced filtering algorithms for noise reduction
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        3D trajectory reconstruction and visualization
+                                    </li>
+                                </ul>
+                                
+                                <h4 class="font-inter font-semibold text-primary mb-3">Technical Implementation</h4>
+                                <p class="text-text-secondary mb-4 leading-relaxed">
+                                    Built with C++ for optimal performance, the system utilizes OpenCV for image processing and implements custom Extended Kalman Filter algorithms for robust state estimation. The project demonstrates advanced computer vision techniques including camera calibration, feature extraction, and multi-view geometry.
+                                </p>
+                                
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent-100 text-accent text-sm rounded-full">C++</span>
+                                    <span class="px-3 py-1 bg-accent-100 text-accent text-sm rounded-full">OpenCV</span>
+                                    <span class="px-3 py-1 bg-accent-100 text-accent text-sm rounded-full">Computer Vision</span>
+                                    <span class="px-3 py-1 bg-accent-100 text-accent text-sm rounded-full">Kalman Filter</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 2 -->
+                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="Python">
+                    <div class="aspect-video rounded-t-2xl overflow-hidden">
+                        <img src="/images/Architecture diagram.png" alt="Task Management App" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-inter font-semibold text-primary mb-3">UAV based Target Tracking</h3>
+                        <p class="text-text-secondary mb-4 leading-relaxed">
+                            Collaborative project management tool with real-time updates, team collaboration features, and advanced reporting capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-0 mb-4">
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Robotics</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Computer Vision</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Python</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">OpenCV</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">AirSim</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">YOLO</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">DeepSORT</span>
+                            
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="view-details-btn text-accent hover:text-accent-600 font-medium transition-colors duration-200">View Details</button>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/tayyabwahab/UAV-based-Target-Tracking.git" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://taskmanager-demo.alexjohnson.dev" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Expandable Project Details -->
+                        <div class="project-details-expanded max-h-0 overflow-hidden transition-all duration-500 mt-4">
+                            <div class="border-t border-primary-200 pt-4">
+                                <h4 class="font-inter font-semibold text-primary mb-3">Project Overview</h4>
+                                <p class="text-text-secondary mb-4 leading-relaxed">
+                                    An advanced UAV-based target tracking system that combines computer vision, robotics, and machine learning to enable autonomous tracking of moving targets using unmanned aerial vehicles. The system integrates multiple sensors and algorithms for robust target detection and tracking in dynamic environments.
+                                </p>
+                                
+                                <h4 class="font-inter font-semibold text-primary mb-3">Key Features</h4>
+                                <ul class="text-text-secondary mb-4 space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Real-time target detection using YOLO and DeepSORT
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Autonomous UAV navigation and control
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Multi-sensor fusion for robust tracking
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Simulation environment using Microsoft AirSim
+                                    </li>
+                                </ul>
+                                
+                                <h4 class="font-inter font-semibold text-primary mb-3">Technical Implementation</h4>
+                                <p class="text-text-secondary mb-4 leading-relaxed">
+                                    Built with Python and OpenCV for computer vision processing, the system utilizes YOLO for object detection and DeepSORT for tracking. The project integrates with Microsoft AirSim for realistic UAV simulation and testing. Advanced algorithms ensure stable tracking even in challenging conditions.
+                                </p>
+                                
+                                <div class="flex flex-wrap gap-0">
+                                    <span class="px-3 py-1 bg-accent text-white text-sm rounded-full">Python</span>
+                                    <span class="px-3 py-1 bg-accent text-white text-sm rounded-full">OpenCV</span>
+                                    <span class="px-3 py-1 bg-accent text-white text-sm rounded-full">YOLO</span>
+                                    <span class="px-3 py-1 bg-accent text-white text-sm rounded-full">DeepSORT</span>
+                                    <span class="px-3 py-1 bg-accent text-white text-sm rounded-full">AirSim</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 3 -->
+                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="react typescript aws">
+                    <div class="aspect-video rounded-t-2xl overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2016/11/30/20/58/programming-1873854_1280.png" alt="Analytics Dashboard" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-inter font-semibold text-primary mb-3">Step Counter</h3>
+                        <p class="text-text-secondary mb-4 leading-relaxed">
+                            Real-time data visualization platform with interactive charts, custom reporting, and automated insights generation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-warning-100 text-warning text-xs rounded-full">React</span>
+                            <span class="px-2 py-1 bg-warning-100 text-warning text-xs rounded-full">TypeScript</span>
+                            <span class="px-2 py-1 bg-warning-100 text-warning text-xs rounded-full">AWS</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button class="view-details-btn text-accent hover:text-accent-600 font-medium transition-colors duration-200">View Details</button>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com/alexjohnson/analytics-dashboard" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://analytics-demo.alexjohnson.dev" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Expandable Project Details -->
+                        <div class="project-details-expanded max-h-0 overflow-hidden transition-all duration-500 mt-4">
+                            <div class="border-t border-primary-200 pt-4">
+                                <h4 class="font-inter font-semibold text-primary mb-3">Project Overview</h4>
+                                <p class="text-text-secondary mb-4 leading-relaxed">
+                                    A comprehensive step counter application built with React and TypeScript that provides accurate step tracking, activity monitoring, and health insights. The application features a modern, responsive design with real-time data visualization and cloud synchronization.
+                                </p>
+                                
+                                <h4 class="font-inter font-semibold text-primary mb-3">Key Features</h4>
+                                <ul class="text-text-secondary mb-4 space-y-2">
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Real-time step counting and activity tracking
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Interactive charts and data visualization
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Cloud synchronization and data backup
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Responsive design for mobile and desktop
+                                    </li>
+                                </ul>
+                                
+                                <h4 class="font-inter font-semibold text-primary mb-3">Technical Implementation</h4>
+                                <p class="text-text-secondary mb-4 leading-relaxed">
+                                    Built with React and TypeScript for type safety and better development experience. The application uses AWS services for backend infrastructure and data storage. Modern React hooks and functional components ensure clean, maintainable code with excellent performance.
+                                </p>
+                                
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-warning-100 text-warning text-sm rounded-full">React</span>
+                                    <span class="px-3 py-1 bg-warning-100 text-warning text-sm rounded-full">TypeScript</span>
+                                    <span class="px-3 py-1 bg-warning-100 text-warning text-sm rounded-full">AWS</span>
+                                    <span class="px-3 py-1 bg-warning-100 text-warning text-sm rounded-full">Chart.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorized Projects Section -->
+        <section class="animate-on-scroll stagger-4">
+            <h2 class="text-2xl font-inter font-bold text-primary mb-8 flex items-center">
+                <svg class="w-6 h-6 text-accent mr-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
+                </svg>
+                All Projects by Category
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Web Development Category -->
+                <div class="category-section bg-surface rounded-2xl shadow-card overflow-hidden">
+                    <button class="category-header w-full px-6 py-4 flex items-center justify-between hover:bg-primary-50 transition-colors duration-200" data-category="web-development">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <h3 class="text-lg font-inter font-semibold text-primary">Web Development</h3>
+                            <span class="ml-3 px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">6 projects</span>
+                        </div>
+                        <svg class="category-arrow w-5 h-5 text-text-secondary transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="category-content max-h-0 overflow-hidden transition-all duration-500">
+                        <div class="p-6 pt-0">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Project Card 1 -->
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react nodejs">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blog Platform" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-inter font-semibold text-primary mb-2">Blog Platform</h4>
+                                            <p class="text-sm text-text-secondary mb-3">Content management system with markdown support and SEO optimization.</p>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">React</span>
+                                                <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">Node.js</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project Card 2 -->
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="vue typescript">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Portfolio Website" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2669&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-inter font-semibold text-primary mb-2">Portfolio Website</h4>
+                                            <p class="text-sm text-text-secondary mb-3">Responsive portfolio site with smooth animations and contact integration.</p>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="px-2 py-1 bg-success-100 text-success text-xs rounded-full">Vue.js</span>
+                                                <span class="px-2 py-1 bg-success-100 text-success text-xs rounded-full">TypeScript</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Applications Category -->
+                <div class="category-section bg-surface rounded-2xl shadow-card overflow-hidden">
+                    <button class="category-header w-full px-6 py-4 flex items-center justify-between hover:bg-primary-50 transition-colors duration-200" data-category="mobile-apps">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17 19H7V5h10v14zm-1-6h-8v4h8v-4zM9 6v5h6V6H9z"/>
+                            </svg>
+                            <h3 class="text-lg font-inter font-semibold text-primary">Mobile Applications</h3>
+                            <span class="ml-3 px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">3 projects</span>
+                        </div>
+                        <svg class="category-arrow w-5 h-5 text-text-secondary transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="category-content max-h-0 overflow-hidden transition-all duration-500">
+                        <div class="p-6 pt-0">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Project Card 1 -->
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react native">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                            <img src="https://images.pixabay.com/photo/2016/12/09/11/33/smartphone-1894723_1280.jpg" alt="Fitness Tracker" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-inter font-semibold text-primary mb-2">Fitness Tracker</h4>
+                                            <p class="text-sm text-text-secondary mb-3">Cross-platform mobile app for tracking workouts and health metrics.</p>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="px-2 py-1 bg-warning-100 text-warning text-xs rounded-full">React Native</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps Category -->
+                <div class="category-section bg-surface rounded-2xl shadow-card overflow-hidden">
+                    <button class="category-header w-full px-6 py-4 flex items-center justify-between hover:bg-primary-50 transition-colors duration-200" data-category="cloud-devops">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+                            </svg>
+                            <h3 class="text-lg font-inter font-semibold text-primary">Cloud & DevOps</h3>
+                            <span class="ml-3 px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">3 projects</span>
+                        </div>
+                        <svg class="category-arrow w-5 h-5 text-text-secondary transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="category-content max-h-0 overflow-hidden transition-all duration-500">
+                        <div class="p-6 pt-0">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- Project Card 1 -->
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="aws python">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="CI/CD Pipeline" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-inter font-semibold text-primary mb-2">CI/CD Pipeline</h4>
+                                            <p class="text-sm text-text-secondary mb-3">Automated deployment pipeline with testing and monitoring integration.</p>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">AWS</span>
+                                                <span class="px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">Python</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 mt-16">
+        <div class="max-w-content mx-auto px-6 text-center">
+            <p class="text-sm opacity-80">© 2025 Alex Johnson. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        const clearSearchBtn = document.getElementById('clear-search');
+        const projectCards = document.querySelectorAll('.project-card');
+        const resultsCount = document.getElementById('count-number');
+        
+        let activeFilters = new Set();
+        
+        function updateResultsCount() {
+            const visibleCards = document.querySelectorAll('.project-card:not(.hidden)');
+            resultsCount.textContent = visibleCards.length;
+        }
+        
+        function filterProjects() {
+            const searchTerm = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+            
+            projectCards.forEach(card => {
+                const title = card.querySelector('h3, h4').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const tags = card.dataset.tags ? card.dataset.tags.toLowerCase() : '';
+                
+                const matchesSearch = !searchTerm || 
+                    title.includes(searchTerm) || 
+                    description.includes(searchTerm) || 
+                    tags.includes(searchTerm);
+                
+                const matchesFilters = activeFilters.size === 0 || 
+                    Array.from(activeFilters).some(filter => tags.includes(filter));
+                
+                if (matchesSearch && matchesFilters) {
+                    card.classList.remove('hidden');
+                    card.classList.add('fade-in');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('fade-in');
+                }
+            });
+            
+            resultsCount.textContent = visibleCount;
+        }
+        
+        searchInput.addEventListener('input', (e) => {
+            if (e.target.value) {
+                clearSearchBtn.classList.remove('hidden');
+            } else {
+                clearSearchBtn.classList.add('hidden');
+            }
+            filterProjects();
+        });
+        
+        clearSearchBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            clearSearchBtn.classList.add('hidden');
+            filterProjects();
+        });
+
+        // Filter tags functionality
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const activeFiltersContainer = document.getElementById('active-filters');
+        
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const filter = tag.dataset.filter;
+                
+                if (activeFilters.has(filter)) {
+                    activeFilters.delete(filter);
+                    tag.classList.remove('bg-accent', 'text-white', 'border-accent');
+                    tag.classList.add('border-border', 'hover:border-accent', 'hover:text-accent');
+                } else {
+                    activeFilters.add(filter);
+                    tag.classList.add('bg-accent', 'text-white', 'border-accent');
+                    tag.classList.remove('border-border', 'hover:border-accent', 'hover:text-accent');
+                }
+                
+                updateActiveFilters();
+                filterProjects();
+            });
+        });
+        
+        function updateActiveFilters() {
+            activeFiltersContainer.innerHTML = '';
+            
+            activeFilters.forEach(filter => {
+                const chip = document.createElement('span');
+                chip.className = 'inline-flex items-center px-3 py-1 bg-accent text-white text-sm rounded-full';
+                chip.innerHTML = `
+                    ${filter}
+                    <button class="ml-2 hover:bg-accent-600 rounded-full p-1" onclick="removeFilter('${filter}')">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                `;
+                activeFiltersContainer.appendChild(chip);
+            });
+        }
+        
+        window.removeFilter = function(filter) {
+            activeFilters.delete(filter);
+            
+            // Update the corresponding filter tag
+            const filterTag = document.querySelector(`[data-filter="${filter}"]`);
+            if (filterTag) {
+                filterTag.classList.remove('bg-accent', 'text-white', 'border-accent');
+                filterTag.classList.add('border-border', 'hover:border-accent', 'hover:text-accent');
+            }
+            
+            updateActiveFilters();
+            filterProjects();
+        };
+
+        // Category expansion functionality
+        const categoryHeaders = document.querySelectorAll('.category-header');
+        
+        categoryHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const arrow = header.querySelector('.category-arrow');
+                const isExpanded = content.style.maxHeight && content.style.maxHeight !== '0px';
+                
+                if (isExpanded) {
+                    content.style.maxHeight = '0px';
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Project details expansion functionality
+        const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+        
+        viewDetailsBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const projectCard = btn.closest('.project-card');
+                const expandedContent = projectCard.querySelector('.project-details-expanded');
+                const isExpanded = expandedContent.style.maxHeight && expandedContent.style.maxHeight !== '0px';
+                
+                if (isExpanded) {
+                    expandedContent.style.maxHeight = '0px';
+                    btn.textContent = 'View Details';
+                } else {
+                    expandedContent.style.maxHeight = expandedContent.scrollHeight + 'px';
+                    btn.textContent = 'Hide Details';
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize
+        updateResultsCount();
+    </script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>
