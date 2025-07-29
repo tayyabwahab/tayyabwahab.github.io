@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Professional Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fprofession5757back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="bg-surface shadow-card sticky top-0 z-sticky">
+        <nav class="max-w-content mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10 9 11 1.09-.09 2.16-.31 3.16-.69C16.04 26.69 18 24.96 18 23v-9l4-2-10-10z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-inter font-semibold text-primary">Tayyab Wahab Awan</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="About.html" class="text-accent font-medium border-b-2 border-accent pb-1 transition-colors duration-200">About</a>
+                    <a href="Portfolio.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Portfolio</a>
+                    <a href="Publications.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Publications</a>
+                    <a href="Contact.html" class="text-text-secondary hover:text-primary transition-colors duration-200">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-primary-100 transition-colors duration-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4 border-t border-border">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="About.html" class="text-accent font-medium px-2 py-1">About</a>
+                    <a href="Portfolio.html" class="text-text-secondary hover:text-primary px-2 py-1 transition-colors duration-200">Portfolio</a>
+                    <a href="Publications.html" class="text-text-secondary hover:text-primary px-2 py-1 transition-colors duration-200">Publications</a>
+                    <a href="Contact.html" class="text-text-secondary hover:text-primary px-2 py-1 transition-colors duration-200">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-content mx-auto px-6 py-12">
+        <!-- Hero Section -->
+        <section class="grid lg:grid-cols-12 gap-4 mb-1">
+            <!-- Left Column - Personal Introduction -->
+            <div class="lg:col-span-7 animate-on-scroll">
+                <div class="flex flex-col md:flex-row items-start gap-4 mb-8">
+                    <!-- Professional Headshot -->
+                    <div class="flex-shrink-0">
+                        <div class="w-32 h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden shadow-card hover-lift">
+                            <img src="/images/my.jpg" alt="Professional headshot" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                    </div>
+                    
+                    <!-- Introduction Text -->
+                    <div class="flex-1">
+                        <h1 class="text-fluid-2xl font-inter font-bold text-primary mb-2">
+                            <!-- Hello, I'm <span class="text-accent">Tayyab</span> -->
+                            <span class="text-accent">Machine Learning Engineer</span>
+                        </h1>
+                        <p class="text-fluid-lg text-text-secondary mb-6 leading-relaxed text-justify">
+                            Machine learning engineer with over 8 years of experience in developing and deploying machine learning models and AI-driven solutions. 
+                            My core strength lies in problem-solving and critical thinking, enabling me to develop innovative solutions.
+                        </p>
+                        
+                        <!------------------- Key Expertise Areas ----------------------->
+                        <!-- <div class="bg-primary-50 rounded-xl p-6 border border-primary-100">
+                            <h3 class="text-lg font-inter font-semibold text-primary mb-3">Key Expertise Areas</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                    <span class="text-lg text-text-secondary">Generative AI</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                    <span class="text-lg text-text-secondary">Computer Vision</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                    <span class="text-lg text-text-secondary">LLMs</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                    <span class="text-lg text-text-secondary">Robotics</span>
+                                </div>
+                                
+                            </div>
+                        </div> -->
+                        <!------------------- Key Expertise Areas ----------------------->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Interactive Timeline -->
+            <div class="lg:col-span-5 animate-on-scroll stagger-2">
+                <div class="bg-surface rounded-2xl shadow-card p-6">
+                    <h2 class="text-xl font-inter font-semibold text-primary mb-6 flex items-center">
+                        <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Recent Experience
+                    </h2>
+                    
+                    <div class="space-y-6" id="timeline">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item relative pl-8 pb-6 border-l-2 border-primary-200 cursor-pointer hover:border-accent transition-colors duration-300" data-expanded="false">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-accent rounded-full border-2 border-surface"></div>
+                            <div class="timeline-header">
+                                <h3 class="font-inter font-semibold text-primary">Artificial Intelligence Engineer</h3>
+                                <p class="text-sm text-text-secondary">Radiusplay • Jan 2025 - June 2025</p>
+                            </div>
+                            <div class="timeline-content mt-2 max-h-0 overflow-hidden transition-all duration-500">
+                                <p class="text-sm text-text-secondary leading-relaxed">
+                                    Developed a RAG-based QA chatbot using LangChain to accurately answer user queries by retrieving and presenting detailed 
+                                    information about the offered services from service-specific documentation.
+                                </p>
+                                <div class="flex flex-wrap gap-0 mt-3">
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">RAG</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Python</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">LangChain</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">MLOPs</span> 
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">AWS</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">GitHub</span>                          
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 2 -->
+                        <div class="timeline-item relative pl-8 pb-6 border-l-2 border-primary-200 cursor-pointer hover:border-accent transition-colors duration-300" data-expanded="false">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-400 rounded-full border-2 border-surface"></div>
+                            <div class="timeline-header">
+                                <h3 class="font-inter font-semibold text-primary">Artificial Intelligence Engineer</h3>
+                                <p class="text-sm text-text-secondary">CENDAS • March 2024 - Oct. 2024</p>
+                            </div>
+                            <div class="timeline-content mt-2 max-h-0 overflow-hidden transition-all duration-500">
+                                <p class="text-sm text-text-secondary leading-relaxed">
+                                    Build A RAG-based system for on-site workers to answer their queries from detailed manuals. Optimized existing object detection model and similarity search algortithm
+                                    to improve accuracy of components detection in construction plans and developed end-to-end MLOPs pipeline to deploy the project on AWS.
+                                </p>
+                                <div class="flex flex-wrap gap-0 mt-3">
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Computer Vision</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">RAG</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Python</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">LangChain</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">OpenCV</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">MLOPs</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Docker</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">AWS</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">GitHub</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Jira</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Notion</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Mural</span>
+                                                 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Timeline Item 3 -->
+                        <div class="timeline-item relative pl-8 border-l-2 border-primary-200 cursor-pointer hover:border-accent transition-colors duration-300" data-expanded="false">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-primary-400 rounded-full border-2 border-surface"></div>
+                            <div class="timeline-header">
+                                <h3 class="font-inter font-semibold text-primary">Machien Learning Engineer</h3>
+                                <p class="text-sm text-text-secondary">Diveroid • Feb 2023 - Feb 2024</p>
+                            </div>
+                            <div class="timeline-content mt-2 max-h-0 overflow-hidden transition-all duration-500">
+                                <p class="text-sm text-text-secondary leading-relaxed">
+                                    Worked on the enhancement of underwater images. Developed state-of-the-art Computer Vision algorithms in C++ and Python for mobile applications. Trained GAN models to 
+                                    generate realistic underwater images.
+                                </p>
+                                <div class="flex flex-wrap gap-0 mt-3">
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Computer Vision</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">GAN</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">C++</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Python</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Kotlin</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Swift</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">GitHub</span>
+                                    <span class="px-2 py-1 bg-accent text-white text-sm rounded-full">Slack</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------------------------ Overview in Figures --------------------------->
+        <div class="flex flex-wrap justify-center gap-6 mb-12">
+            <div class="text-center">
+                <div class="text-fluid-3xl font-bold text-accent">8+</div>
+                <div class="text-text-secondary">Years of Experience</div>
+            </div>
+            <div class="text-center">
+                <div class="text-fluid-3xl font-bold text-accent">50+</div>
+                <div class="text-text-secondary">Projects Completed</div>
+            </div>
+            <div class="text-center">
+                <div class="text-fluid-3xl font-bold text-accent">5+</div>
+                <div class="text-text-secondary">Companies</div>
+            </div>
+        </div>
+        <!------------------------ Overview in Figures --------------------------->
+
+        <!-- Skills Visualization Section -->
+        <section class="animate-on-scroll stagger-3">
+            <div class="bg-surface rounded-2xl shadow-card p-8">
+                <h2 class="text-2xl font-inter font-bold text-primary mb-8 text-center">Skills & Expertise</h2>
+                
+
+                <!-------------------------- Technical Skills ----------------------------->
+                <div class="grid md:grid-cols-2 gap-4">
+                    
+                    <div>
+                        <h3 class="text-2xl font-inter font-bold text-primary mb-6 flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                            </svg>
+                            Languages & Other Skills
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/python.webp" class="w-4 h-4 inline-block" />
+                                        Python
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">95%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/c++.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        C++
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">85%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/chash.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        C#
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">85%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/java.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Java
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/matlab.gif" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Matlab
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/shell.jpg" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Shell
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="75%"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/problemsolving.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Problem Solving
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/dsa.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Data Structures and Algorithms
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/linux.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Linux
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/mlops.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        MLOPs
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/ros.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        ROS
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-------------------------- Frameworks and Libraries ----------------------------->
+                    <div>
+                        <h3 class="text-2xl font-inter font-bold text-primary mb-6 flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2 1l-3 4v7h2v7h3v-7h1v7h3z"/>
+                            </svg>
+                            Frameworks and Libraries
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/pytorch.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Pytorch
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">95%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/tf.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Tensorflow
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">95%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/opencv.jpg" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        OpenCV
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">85%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/ollama.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Ollama
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">75%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/langchain.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Langchain
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/langgraph.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        LangGraph
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">75%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/nltk.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        NLTK
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">75%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/numpy.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Numpy
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">75%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/sciket-learn.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Sciket-learn
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">75%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/pandas.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Pandas
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">75%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/trt.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        TensorRt
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">75%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="75%"></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-------------------------- Frameworks and Libraries ----------------------------->
+
+                    <!-------------------------- Technologies ----------------------------->
+                    <div>
+                        <h3 class="text-2xl font-inter font-bold text-primary mb-6 flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2 1l-3 4v7h2v7h3v-7h1v7h3z"/>
+                            </svg>
+                            Technologies
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/rag.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        RAG
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">85%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/github.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Github
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">85%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-0">
+                                        <img src="/images/docker.webp" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Docker
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">95%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-0">
+                                        <img src="/images/database.svg" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        Vector Database
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">85%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/aws.png" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        AWS
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-lg font-medium text-text-primary flex items-center gap-1">
+                                        <img src="/images/cuda.svg" alt="Docker icon" class="w-4 h-4 inline-block" />
+                                        CUDA
+                                    </span>
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-------------------------- Technologies ----------------------------->
+
+                    <!-------------------------- AI Domains ----------------------------->
+                    <div>
+                        <h3 class="text-2xl font-inter font-bold text-primary mb-6 flex items-center">
+                            <svg class="w-5 h-5 text-accent mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2 1l-3 4v7h2v7h3v-7h1v7h3z"/>
+                            </svg>
+                            Area of Expertise 
+                        </h3>
+                        <div class="space-y-4">
+                            
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <!-- <span class="text-lg font-medium text-text-primary">Computer Vision (CNNs, GANs, Diffusion Models, VAEs, ViTs)</span> -->
+                                    <div>
+                                        <span class="text-lg font-medium text-text-primary">Computer Vision</span>
+                                        <span class="text-sm text-base text-text-secondary">(CNNs, GANs, Diffusion Models, VAEs, ViTs)</span>
+                                      </div>
+                                    
+                                    <!-- <span class="text-sm text-text-secondary">80%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="95%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div>
+                                        <span class="text-lg font-medium text-text-primary">Natural Language Processing</span>
+                                        <span class="text-sm text-base text-text-secondary">(RNN, LSTM, Transformers)</span>
+                                      </div>
+                                    <!-- <span class="text-lg font-medium text-text-primary">Natural Language Processing (RNN, LSTM, Transformers)</span> -->
+                                    <!-- <span class="text-sm text-text-secondary">85%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div>
+                                        <span class="text-lg font-medium text-text-primary">Generative AI</span>
+                                        <span class="text-sm text-base text-text-secondary">(GPT, Llama, Claude, Gemma, DeepSeek, Mistral)</span>
+                                      </div>
+                                    <!-- <span class="text-lg font-medium text-text-primary">Generative AI (GPT, Llama, Claude, Gemma, DeepSeek)</span> -->
+                                    <!-- <span class="text-sm text-text-secondary">90%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div>
+                                        <span class="text-lg font-medium text-text-primary">Robotics</span>
+                                        <span class="text-sm text-base text-text-secondary">(Reinforcement Learning)</span>
+                                      </div>
+                                    <!-- <span class="text-lg font-medium text-text-primary">Robotics</span> -->
+                                    <!-- <span class="text-sm text-text-secondary">95%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div>
+                                        <span class="text-lg font-medium text-text-primary">Embedded Systems & Edge Platforms</span>
+                                        <span class="text-sm text-base text-text-secondary">(Jetson, Raspberry Pi, Arduino)</span>
+                                      </div>
+                                    <!-- <span class="text-lg font-medium text-text-primary">Generative AI (GPT, Llama, Claude, Gemma, DeepSeek)</span> -->
+                                    <!-- <span class="text-sm text-text-secondary">90%</span> -->
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="skill-item">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-medium text-text-primary">Communication</span>
+                                    <span class="text-sm text-text-secondary">85%</span>
+                                </div>
+                                <div class="w-full bg-primary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full skill-bar" data-width="85%"></div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-------------------------- Technologies ----------------------------->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Social Media Integration -->
+        <section class="mt-16 text-center animate-on-scroll stagger-4">
+            <h2 class="text-xl font-inter font-semibold text-primary mb-8">Connect With Me</h2>
+            <div class="flex justify-center space-x-6">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/twa90/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center w-12 h-12 bg-surface rounded-xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-200">
+                    <svg class="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                
+                <!-- GitHub -->
+                <a href="https://github.com/tayyabwahab" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center w-12 h-12 bg-surface rounded-xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-200">
+                    <svg class="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                
+                <!-- Google Scholar -->
+                <a href="https://scholar.google.ca/citations?user=fj7gSXoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center w-12 h-12 bg-surface rounded-xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-200">
+                    <svg class="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8 mt-16">
+        <div class="max-w-content mx-auto px-6 text-center">
+            <p class="text-sm opacity-80">© 2025 Alex Johnson. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Timeline interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            timelineItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const content = this.querySelector('.timeline-content');
+                    const isExpanded = this.dataset.expanded === 'true';
+                    
+                    // Close all other items
+                    timelineItems.forEach(otherItem => {
+                        if (otherItem !== this) {
+                            const otherContent = otherItem.querySelector('.timeline-content');
+                            otherContent.style.maxHeight = '0px';
+                            otherItem.dataset.expanded = 'false';
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isExpanded) {
+                        content.style.maxHeight = '0px';
+                        this.dataset.expanded = 'false';
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        this.dataset.expanded = 'true';
+                    }
+                });
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Skills animation
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const skillBars = entry.target.querySelectorAll('.skill-bar');
+                    skillBars.forEach(bar => {
+                        const width = bar.dataset.width;
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 200);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.skill-item').forEach(item => {
+            skillsObserver.observe(item);
+        });
+    </script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>
