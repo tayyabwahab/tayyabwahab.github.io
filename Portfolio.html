@@ -308,26 +308,25 @@
                 <!-- Featured Project 3 -->
                 <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv">
                     <div class="aspect-video rounded-t-2xl overflow-hidden">
-                        <img src="/images/Result1.png" alt="Single Image DepthNet" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                        <img src="/images/MVPT.png" alt="Single Image DepthNet" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-inter font-semibold text-primary mb-3">Single Image DepthNet</h3>
+                        <h3 class="text-xl font-inter font-semibold text-primary mb-3">Multi-view Point Tracking</h3>
                         <p class="text-text-secondary mb-4 leading-relaxed text-justify">
-                            Single Image DepthNet is a modified U-Net architecture that takes a single RGB image as input and predicts its corresponding depth map, 
-                            enabling scene understanding from 2D images without stereo input.
+                            Developed a surveillance system for multi-viewpoint object tracking using a single dome camera covering four distinct views. The system performs real-time tracking and classification 
+                            of humans and vehicles, while maintaining consistent object IDs across four different camera viewpoints through advanced background modeling, blob detection, and predictive tracking algorithms.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Computer Vision</span>
                             <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Machine Learning</span>
-                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">U-Net</span>
-                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Python</span>
-                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Pytorch</span>
-                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">OpenCV</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">C++</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">MFC</span>
+                            
                         </div>
                         <div class="flex items-center justify-between">
                             <button class="view-details-btn text-accent hover:text-accent-600 font-medium transition-colors duration-200">View Details</button>
                             <div class="flex space-x-2">
-                                <a href="https://github.com/tayyabwahab/Single-Image-DepthNet.git" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                <a href="https://github.com/tayyabwahab/Multiview-Point-Tracking.git" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
@@ -340,12 +339,10 @@
                             <div class="border-t border-primary-200 pt-4">
                                 <h4 class="font-inter font-semibold text-primary mb-3">Project Overview</h4>
                                 <p class="text-text-secondary mb-4 leading-relaxed text-justify">
-                                    Single Image DepthNet is a deep learning-based project focused on predicting depth information from a single RGB image using a modified U-Net architecture. 
-                                    The project is built with PyTorch and the public dataset NYU-DepthV2 was used to train and test the models efficiency. The U-Net model architecture consists 
-                                    of an encoder that captures contextual features from the input image and a decoder that reconstructs the spatial resolution to generate a dense depth map. 
-                                    The training pipeline includes image preprocessing, loss computation and model optimization using an Adam optimizer. During inference, the model predicts 
-                                    the relative depth of each pixel, producing a grayscale depth map that can be visualized to assess depth quality. This project demonstrates the application of 
-                                    convolutional neural networks (CNNs) for pixel-wise regression tasks and is useful for applications like 3D scene reconstruction, AR/VR, and autonomous navigation using monocular vision.
+                                    This project was designed for multi-view object tracking in surveillance systems. Using a dome camera that covers four simultaneous viewpoints, the system detects, tracks, and classifies objects 
+                                    such as humans and vehicles in real time. Detection begins with background subtraction via adaptive Mixture of Gaussians (MOG) or frame differencing, enabling robust foreground segmentation under 
+                                    dynamic lighting. Extracted blobs are segmented using connected component labeling and filtered by size and aspect ratio before being classified into categories (person or a vehicle). A cross-view 
+                                    tracking module ensures objects retain a unique ID when moving between different viewpoints, using spatial mapping of boundaries for consistent identity management. The image processing pipeline 
                                 </p>
                                 
                                 <h4 class="font-inter font-semibold text-primary mb-3">Key Features</h4>
@@ -354,20 +351,33 @@
                                         <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
-                                        Monocular Depth Estimation
+                                        Multi-Viewpoint Coverage
                                     </li>
                                     <li class="flex items-start">
                                         <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
-                                        Lightweight & Easy to Extend
+                                        Advanced Multi-Object Tracking
                                     </li>
                                     <li class="flex items-start">
                                         <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                         </svg>
-                                        Applicable in autonomous navigation, augmented reality, 3D reconstruction, and robotics using monocular vision systems.
+                                        Unique ID Assignment
                                     </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Background Modeling & Foreground Segmentation
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Cross-View Object Tracking
+                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -784,7 +794,7 @@
             </h2>
 
             <div class="space-y-6">
-                <!-- Web Development Category -->
+                <!-- Computer Vision Category -->
                 <div class="category-section bg-surface rounded-2xl shadow-card overflow-hidden">
                     <button class="category-header w-full px-6 py-4 flex items-center justify-between hover:bg-primary-50 transition-colors duration-200" data-category="web-development">
                         <div class="flex items-center">
@@ -792,7 +802,7 @@
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                             </svg>
                             <h3 class="text-lg font-inter font-semibold text-primary">Computer Vision</h3>
-                            <span class="ml-3 px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">0 projects</span>
+                            <span class="ml-3 px-2 py-1 bg-accent-100 text-accent text-xs rounded-full">7 projects</span>
                         </div>
                         <svg class="category-arrow w-5 h-5 text-text-secondary transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -802,6 +812,106 @@
                         <div class="p-6 pt-0">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <!-- Project Card 1 -->
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react nodejs">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                                            <img src="/images/DepthNet.png" alt="DepthNet" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                        </div>
+                                        <div class="flex-1">
+                                            <h4 class="font-inter font-semibold text-justify text-primary mb-2">Single Image DepthNet</h4>
+                                            <p class="text-sm text-text-secondary text-justify mb-3">
+                                                <!-- Single Image DepthNet is a modified U-Net architecture that takes a single RGB image as input and predicts its corresponding depth map, enabling scene understanding from 2D images without stereo input. -->
+                                                Single Image DepthNet is a deep learning-based project focused on predicting depth information from a single RGB image using a modified U-Net architecture. The project is built with PyTorch and the public dataset NYU-DepthV2 was used to train and test the models efficiency. The U-Net model architecture consists of an encoder that captures contextual features from the input image and a decoder that reconstructs the spatial resolution to generate a dense depth map. The training pipeline includes image preprocessing, loss computation and model optimization using an Adam optimizer. During inference, the model predicts the relative depth of each pixel, producing a grayscale depth map that can be visualized to assess depth quality. This project demonstrates the application of convolutional neural networks (CNNs) for pixel-wise regression tasks and is useful for applications like 3D scene reconstruction, AR/VR, and autonomous navigation using monocular vision.
+                                            </p>
+                                            <div class="flex flex-wrap gap-1 mb-3">
+                                                <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Computer Vision</span>
+                                                <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Machine Learning</span>
+                                                <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">U-Net</span>
+                                                <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Image Segmentation</span>
+                                                <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Python</span>
+                                                <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Pytorch</span>
+                                                <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">OpenCV</span>
+                                            </div>
+                                            <div class="flex-1">
+                                                <!-- <button class="view-details-btn text-accent hover:text-accent-600 font-medium transition-colors duration-200">View Details</button> -->
+                                                <div class="flex space-x-2 mb-3">
+                                                    <!-- <span>GitHub repo</span>
+                                                    <a href="https://github.com/tayyabwahab/CloudSegmentaionUsingUNet.git" target="_blank" rel="noopener noreferrer" class="text-text-secondary hover:text-primary transition-colors duration-200">
+                                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                                        </svg>
+                                                    </a> -->
+                                                    <a href="https://github.com/tayyabwahab/Single-Image-DepthNet" target="_blank" rel="noopener noreferrer"class="inline-flex items-center px-3 py-2 bg-primary text-white rounded hover:bg-primary-dark transition-colors duration-200">
+                                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                                        </svg>
+                                                        <span>Github repo</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- Expandable Project Details -->
+                                            <!-- <div class="project-details-expanded max-h-0 overflow-hidden transition-all duration-500 mt-4">
+                                                <div class="border-t border-primary-200 pt-4">
+                                                    <h4 class="font-inter font-semibold text-primary mb-3">Project Overview</h4>
+                                                    <p class="text-text-secondary mb-4 leading-relaxed text-justify">
+                                                        Watkins is an advanced step-counting and walking guidance application developed for both Android and iOS platforms. 
+                                                        It utilizes mobile device sensors combined with a machine learning algorithm to intelligently estimate a user's steps based on real-time physical 
+                                                        movement. The app not only tracks activity with precision but also enriches the user experience through interactive and engaging guidance. 
+                                                        Upon launch, Watkins prompts users to enter the distance they wish to travel and their gender, allowing the system to personalize the walking session. 
+                                                        Throughout the walk, the app provides real-time, step-by-step audio and visual instructions, supported by animated GIFs demonstrating 
+                                                        walking, sitting, and turning actions for enhanced visual interaction. Once the walk is completed, Watkins delivers a detailed summary of the session, 
+                                                        offering users insights into their trip and progress. This thoughtful combination of data-driven accuracy and user-friendly interactivity 
+                                                        makes Watkins ideal for those seeking motivation, personalized fitness routines, or guided walking experiences.
+                                                    </p>
+                                                    
+                                                    <h4 class="font-inter font-semibold text-primary mb-3">Key Features</h4>
+                                                    <ul class="text-text-secondary mb-4 space-y-2">
+                                                        <li class="flex items-start">
+                                                            <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                            </svg>
+                                                            Machine Learning-Powered Estimation for Accurate Step Counting
+                                                        </li>
+                                                        <li class="flex items-start">
+                                                            <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                            </svg>
+                                                            Real-Time Walking Guidance
+                                                        </li>
+                                                        <li class="flex items-start">
+                                                            <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                            </svg>
+                                                            Custom Walk Configuration
+                                                        </li>
+                                                        <li class="flex items-start">
+                                                            <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                            </svg>
+                                                            Interactive Visual and Audio Feedback
+                                                        </li>
+                                                        <li class="flex items-start">
+                                                            <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                            </svg>
+                                                            Trip Summary Report
+                                                        </li>
+                                                        <li class="flex items-start">
+                                                            <svg class="w-4 h-4 text-accent mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                            </svg>
+                                                            Cross-Platform Availability
+                                                        </li>
+                                                    </ul>
+                                                
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- Project Card 2 -->
                                 <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react nodejs">
                                     <div class="flex items-start space-x-4">
                                         <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
