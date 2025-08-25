@@ -100,14 +100,15 @@
                     <span class="text-lg font-medium text-accent">Filter by technology:</span>
                     <div id="filter-tags" class="flex flex-wrap gap-1">
                         <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="cv">Computer Vision</button>
-                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="Machine Learning">Machine Learning</button>
-                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="NLP">NLP</button>
-                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="LLM">LLM</button>
-                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="RAG">RAG</button>
-                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="Robotics">Robotics</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="ml">Machine Learning</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="nlp">NLP</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="llm">LLM</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="rag">RAG</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="robotics">Robotics</button>
                         <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="python">Python</button>
-                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="C++">C++</button>
-                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="Robotics">Mobile App</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="c++">C++</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="app">Mobile App</button>
+                        <button class="filter-tag px-3 py-1 text-lg rounded-full border border-border hover:bg-accent hover:border-accent hover:text-white transition-colors duration-200" data-filter="edge">Edge AI</button>
                     </div>
                 </div>
 
@@ -133,7 +134,7 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-projects">
 
                 <!-- Featured Project 1 -->
-                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv">
+                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="rag ml llm python">
                     <div class="aspect-video rounded-t-2xl overflow-hidden">
                         <img src="/images/QA for Workers.png" alt="SecureFaceChain" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                     </div>
@@ -208,7 +209,7 @@
                 </div>
 
                 <!-- Featured Project 2 -->
-                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="Python">
+                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="robotics cv ml python">
                     <div class="aspect-video rounded-t-2xl overflow-hidden">
                         <img src="/images/Architecture diagram.png" alt="UAV based Target Tracking" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                     </div>
@@ -221,6 +222,7 @@
                         <div class="flex flex-wrap gap-1 mb-4">
                             <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Robotics</span>
                             <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Computer Vision</span>
+                            <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Machine Learning</span>
                             <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Python</span>
                             <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">Pytorch</span>
                             <span class="px-2 py-1 bg-accent text-white text-xs rounded-full">OpenCV</span>
@@ -306,7 +308,7 @@
                 </div>
 
                 <!-- Featured Project 3 -->
-                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv">
+                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv ml c++">
                     <div class="aspect-video rounded-t-2xl overflow-hidden">
                         <img src="/images/MVPT.png" alt="Single Image DepthNet" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
                     </div>
@@ -385,7 +387,7 @@
                 </div>
 
                  <!-- Featured Project 4 -->
-                 <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv edge">
+                 <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv edge ml python">
                     <div class="aspect-video rounded-t-2xl overflow-hidden">
                         <img src="/images/Baccarat-game.png" alt="Baccarat Game" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                     </div>
@@ -570,10 +572,10 @@
                             </div>
                         </div> 
                     </div>
-                </div>-->
+                </div> -->
 
                 <!-- Featured Project 6 -->
-                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv">
+                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="cv ml python">
                     <div class="aspect-video rounded-t-2xl overflow-hidden">
                         <img src="/images/GANProject.png" alt="SecureFaceChain" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2939&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                     </div>
@@ -659,7 +661,7 @@
 
 
                 <!-- Featured Project 7 -->
-                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="react typescript aws">
+                <div class="project-card featured bg-surface rounded-2xl shadow-card hover:shadow-card-hover hover-lift transition-all duration-300" data-tags="ml app c++">
                     <div class="aspect-video rounded-t-2xl overflow-hidden">
                         <img src="/images/watkins.png" alt="Analytics Dashboard" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                     </div>
@@ -796,7 +798,7 @@
                         <div class="p-6 pt-0">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <!-- Project Card 1 -->
-                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react nodejs">
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="cv ml python">
                                     <div class="flex items-start space-x-4">
                                         <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
                                             <img src="/images/DepthNet.png" alt="DepthNet" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
@@ -892,7 +894,7 @@
                                     
                                 </div>
                                 <!-- Project Card 2 -->
-                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react nodejs">
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="cv ml python">
                                     <div class="flex items-start space-x-4">
                                         <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
                                             <img src="/images/Cloud Segmentation.png" alt="Blog Platform" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
@@ -983,7 +985,7 @@
                                 </div>
 
                                 <!-- Project Card 2 -->
-                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react nodejs">
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="cv ml python">
                                     <div class="flex items-start space-x-4">
                                         <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
                                             <img src="/images/BreastCancerClassification.png" alt="Breast Cancer Classification" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
@@ -1025,7 +1027,7 @@
                                     
                                 </div>
                                 <!-- Project Card 3 -->
-                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react nodejs">
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="cv ml edge app c++ python">
                                     <div class="flex items-start space-x-4">
                                         <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
                                             <img src="/images/Diveroid.png" alt="Smart Store" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
@@ -1066,7 +1068,7 @@
                                     
                                 </div>
                                 <!-- Project Card 4 -->
-                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="react nodejs">
+                                <div class="project-card bg-primary-50 rounded-xl p-4 hover:shadow-card hover-lift transition-all duration-200" data-tags="cv app c++">
                                     <div class="flex items-start space-x-4">
                                         <div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
                                             <img src="/images/SmartStore.png" alt="Smart Store" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
@@ -1108,7 +1110,7 @@
 
                 <!-- Mobile Applications Category -->
                 <div class="category-section bg-surface rounded-2xl shadow-card overflow-hidden">
-                    <button class="category-header w-full px-6 py-4 flex items-center justify-between hover:bg-primary-50 transition-colors duration-200" data-category="mobile-apps">
+                    <button class="category-header w-full px-6 py-4 flex items-center justify-between hover:bg-primary-50 transition-colors duration-200" data-category="robotics python ml">
                         <div class="flex items-center">
                             <!-- <svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M17 19H7V5h10v14zm-1-6h-8v4h8v-4zM9 6v5h6V6H9z"/>
